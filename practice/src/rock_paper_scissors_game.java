@@ -12,14 +12,12 @@ public class rock_paper_scissors_game {
         do {
             System.out.println("Round: " + roundCounter);
             userHand = userHand();
-            if (userHand.equals("X")) {
+            if (!userHand.equals("X")) {
+            String computerHand = computerHand();
+            winner(userHand, computerHand);
+            roundCounter++;}else {
                 System.out.println("LEAVING GAME...");
-            } else {
-                String computerHand = computerHand();
-                winner(userHand, computerHand);
-                roundCounter++;
             }
-
         }
         while (!userHand.equals("X"));
     }
@@ -28,11 +26,13 @@ public class rock_paper_scissors_game {
         Scanner scan = new Scanner(System.in);
         System.out.println("ROCK...  PAPER...  SCISSORS...");
         System.out.println("Choose one:");
-        String userHand = scan.nextLine().toUpperCase();;
-        while (!userHand.equals("ROCK") && !userHand.equals("PAPER") && !userHand.equals("SCISSORS") && !userHand.equals("X")){
+        String userHand = scan.nextLine().toUpperCase();
+
+        while (!userHand.equals("ROCK") && !userHand.equals("PAPER") && !userHand.equals("SCISSORS") && !userHand.equals("X")) {
+            if (!userHand.equals("X"))  {
             System.out.println("Wrong input! Waiting for valid data as rock/paper/scissors...");
-        userHand = scan.nextLine().toUpperCase();
-        }
+            userHand = scan.nextLine().toUpperCase();
+        }}
         return userHand;
     }
 
