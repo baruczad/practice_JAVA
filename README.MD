@@ -1,3 +1,3 @@
-# Pratice repository for JAVA
+## Pratice repository for JAVA
 
-[#### Files are in the src folder.](practice/src)
+##### [Files are in the src folder.](practice/src)
