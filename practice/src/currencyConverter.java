@@ -34,7 +34,7 @@ public class currencyConverter {
                 count = scan.nextDouble();
                 needMore = false;
             } catch (Exception e) {
-                System.out.println("Not a valid input. Double/Int needed.");
+                System.out.println("Not a valid input. Number needed.");
                 scan.next();
             }
         }
